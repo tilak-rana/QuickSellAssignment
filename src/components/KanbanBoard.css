@@ -1,0 +1,194 @@
+.btn {
+    background-color: white;
+    margin-top: 15px;
+    margin-left: 30px;
+    padding-bottom: 4px;
+    font-size: medium;
+    font-weight: bold;
+    text-align: center;
+    cursor: pointer;
+}
+
+.btn img {
+    position: relative;
+    top: 2.5px;
+}
+
+.DisplayCard {
+    position: absolute;
+    top: 50px;
+    left: 9px;
+    border: 2px solid rgb(149, 148, 148);
+    background-color: white;
+    width: 250px;
+    height: 120px;
+    margin-top: 10px;
+    margin-left: 30px;
+    padding: 6px;
+    z-index: 1000;
+}
+
+.groupTitle,
+.orderTitle {
+    position: relative;
+    margin: 0;
+    top: 25px;
+    left: 5px;
+    font-size: 20px;
+}
+
+#groupId,
+#orderId {
+    position: relative;
+    top: 5px;
+    left: 165px;
+    padding: 4px;
+    font-size: 15px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    position: relative;
+    top: 20px;
+    padding: 20px;
+    height: 100vh;
+    max-height: 3600px;
+    background-color: rgb(239, 239, 239);
+    border-top: 1px solid rgb(212, 212, 212);
+    width: 100vw;
+}
+
+.kanbanBoard {
+    background-color: rgb(239, 239, 239);
+    margin: 10px;
+    flex: 1 1 18%;
+    max-width: 18%;
+}
+
+.BoardHead {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.section {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+.ticketCard {
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 16px;
+    margin: 8px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.ticketCard p {
+    margin: 4px 0;
+}
+
+#span1,
+#span2 {
+    margin: 4px;
+    position: relative;
+    top: -2px;
+    left: 10px;
+}
+
+#tag {
+    margin: 6px;
+    padding-left: 5px;
+    border: 1px solid rgb(207, 206, 206);
+    padding: 4px;
+    background-color: #ebe9e9;
+}
+
+#tag img,
+#ticketcardimg1 {
+    position: relative;
+    top: 3px;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 1200px) {
+    .btn {
+        margin-left: 15px;
+    }
+
+    .kanbanBoard {
+        flex: 1 1 45%;
+        max-width: 45%;
+    }
+}
+
+@media (max-width: 800px) {
+    .btn {
+        margin-left: 10px;
+
+    }
+
+    .kanbanBoard {
+        flex: 1 1 100%;
+        max-width: 100%;
+    }
+
+    .DisplayCard {
+        top: 50px;
+        left: 9px;
+    }
+
+    #groupId,
+    #orderId {
+        left: auto;
+
+        right: 10px;
+
+    }
+}
+
+@media (max-width: 500px) {
+    .btn {
+        font-size: 14px;
+
+        padding: 8px 10px;
+
+    }
+
+    .ticketCard {
+        padding: 12px;
+
+    }
+
+    .groupTitle,
+    .orderTitle {
+        font-size: 18px;
+
+    }
+}
+
+@media (max-width: 300px) {
+    .btn {
+        font-size: 12px;
+
+    }
+
+    .DisplayCard {
+        width: 90%;
+
+        top: 40px;
+
+        left: 5%;
+
+    }
+
+    .kanbanBoard {
+        margin: 5px 0;
+
+    }
+}
