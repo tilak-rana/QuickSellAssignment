@@ -49,6 +49,7 @@ const KanbanBoard = () => {
     const arr = ["Backlog", "Todo", "In progress", "Done", "Cancelled"];
     return (
         <div className="body">
+            <h1 id="Headtitle">Team Management Dashboard</h1>
             <button className="btn" onClick={handleClick}>
                 <img src="Display.svg" alt="Display" /> Display <img src="down.svg" alt="Dropdown" />
             </button>
