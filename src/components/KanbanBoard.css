@@ -53,8 +53,7 @@
     position: relative;
     top: 20px;
     padding: 20px;
-    height: 100vh;
-    max-height: 3600px;
+    height: auto;
     background-color: rgb(239, 239, 239);
     border-top: 1px solid rgb(212, 212, 212);
     width: 100vw;
@@ -139,7 +138,7 @@
     }
 
     .DisplayCard {
-        top: 50px;
+        top: 105px;
         left: 9px;
     }
 
@@ -165,6 +164,11 @@
 
     }
 
+    .DisplayCard {
+        top: 150px;
+        left: 9px;
+    }
+
     .groupTitle,
     .orderTitle {
         font-size: 18px;
@@ -179,16 +183,35 @@
     }
 
     .DisplayCard {
-        width: 90%;
-
-        top: 40px;
-
-        left: 5%;
-
+        top: 105px;
     }
 
     .kanbanBoard {
         margin: 5px 0;
 
     }
+}
+
+.team-member-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.team-member-menu li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+.team-member-menu li:hover {
+    background-color: #bcb8c0;
+}
+
+#activeUser {
+    background-color: #bcb8c0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    position: relative;
+    top: -12px;
 }

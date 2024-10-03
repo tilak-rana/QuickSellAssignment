@@ -1,9 +1,34 @@
-import React from "react";
+import React, { useEffect, useRef } from "react";
+import ImageCard from '../assets/default-Profile.png';
 
-const TicketCard = ({ ticket }) => {
+const TicketCard = ({ ticket, ticketTitle, usersData }) => {
+    const activeUserRef = useRef("");
+    useEffect(() => {
+        if (activeUserRef.current) {
+            usersData.forEach((user) => {
+                if (ticket.userId === user.id && user.available) {
+                    // console.log("i am runing", activeUserRef.current)
+                    activeUserRef.current.style.backgroundColor = 'blue';
+                }
+            });
+        }
+    }, [usersData, ticket]);
     return (
         <div className="ticketCard">
-            <p id="id">{ticket.id}</p> {/* Now using userId as per your request */}
+            <div style={{ display: 'flex', justifyContent: 'space-between' }}>
+                <p id="id">{ticket.id}</p>
+                <div>
+                    {ticketTitle !== "user" && (
+                        <img
+                            src={ImageCard}
+                            style={{ width: "25px", height: "25px", borderRadius: "50%" }}
+                            alt="P"
+                            id="ImageCard"
+                        />
+                    )}
+                    {ticketTitle !== "user" && <div ref={activeUserRef} id="activeUser"></div>}
+                </div>
+            </div>
             <p id="title">
                 <img src={`Img-${ticket.status}.svg`} alt="Backlog" /> {ticket.title}
             </p>
@@ -11,7 +36,7 @@ const TicketCard = ({ ticket }) => {
             <p id="tag" style={{ display: 'inline' }}>
                 <img src="Img-Urgent1.svg" alt="..." /> {ticket.tag}
             </p>
-        </div>
+        </div >
     );
 };
 

@@ -71,7 +71,7 @@ const KanbanBoard = () => {
                             />
                             <div className="section">
                                 {group.tickets.map((ticket) => (
-                                    <TicketCard ticket={ticket} key={ticket.id} />
+                                    <TicketCard ticket={ticket} key={ticket.id} ticketTitle={grouping} usersData={users} />
                                 ))}
                             </div>
                         </div>
