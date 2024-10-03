@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import ImageCard from '../assets/default-profile.png';
+import ImageCard from '../assets/default-Profile.png';
 
 const TicketCard = ({ ticket, ticketTitle, usersData }) => {
     const activeUserRef = useRef("");

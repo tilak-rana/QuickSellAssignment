@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import NewCard from "./NewCard";
-import userProfileImage from '../assets/default-profile.png';
+import userProfileImage from '../assets/default-Profile.png';
 
 
 const BoardHeader = ({ title, ticketCount, usersData, onAddTicket }) => {
