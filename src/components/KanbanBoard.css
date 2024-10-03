@@ -216,3 +216,14 @@
     position: relative;
     top: -12px;
 }
+#AddCard:hover {
+    cursor: pointer;
+}
+
+#menu:hover {
+    cursor: pointer;
+}
+
+#onclose:hover {
+    cursor: pointer;
+}
