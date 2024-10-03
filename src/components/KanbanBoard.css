@@ -227,3 +227,7 @@
 #onclose:hover {
     cursor: pointer;
 }
+#Headtitle{
+    text-align: center;
+    margin-bottom: 0;
+}
